@@ -37,11 +37,9 @@
       padding: 80px 24px 60px;
       max-width: 680px;
       margin: 0 auto;
-    }
-    .hero-icon {
-      width: 140px;
-      height: 140px;
-      margin-bottom: 28px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
     .hero-badge {
       display: inline-block;
@@ -54,6 +52,11 @@
       padding: 6px 14px;
       border-radius: 20px;
       margin-bottom: 24px;
+    }
+    .hero-icon {
+      width: 140px;
+      height: 140px;
+      margin-bottom: 28px;
     }
     .hero h1 {
       font-size: 48px;
@@ -272,8 +275,8 @@
 
   <!-- HERO -->
   <div class="hero">
-    <img src="/UrgeWise Icon 1024 x 1024 - Transparent.png" alt="UrgeWise icon" class="hero-icon" />
     <div class="hero-badge">Coming soon to Android</div>
+    <img src="/UrgeWise Icon 1024 x 1024 - Transparent.png" alt="UrgeWise icon" class="hero-icon" />
     <h1>Track your urges.<br/>Understand your patterns.<br/>Reclaim control.</h1>
     <p>UrgeWise is a private, gamified tracking app for people living with body-focused repetitive behaviours — skin picking, hair pulling, nail biting, and more.</p>
     <a href="#notify" class="hero-cta">Notify me when it launches</a>
