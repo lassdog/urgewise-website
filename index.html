@@ -19,15 +19,9 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 40px;
+      padding: 16px 40px;
       background: #F9F4F5;
       border-bottom: 1px solid #C8B8DB;
-    }
-    .nav-logo {
-      font-size: 20px;
-      font-weight: 700;
-      color: #502F4C;
-      text-decoration: none;
     }
     .nav-link {
       font-size: 14px;
@@ -43,6 +37,11 @@
       padding: 80px 24px 60px;
       max-width: 680px;
       margin: 0 auto;
+    }
+    .hero-icon {
+      width: 140px;
+      height: 140px;
+      margin-bottom: 28px;
     }
     .hero-badge {
       display: inline-block;
@@ -179,9 +178,7 @@
       padding: 32px;
       margin-top: 16px;
     }
-    .about-card p {
-      margin-bottom: 12px;
-    }
+    .about-card p { margin-bottom: 12px; }
     .about-card p:last-child { margin-bottom: 0; }
 
     /* COMING SOON */
@@ -260,6 +257,7 @@
       nav { padding: 16px 20px; }
       .hero h1 { font-size: 34px; }
       .hero p { font-size: 16px; }
+      .hero-icon { width: 100px; height: 100px; }
       footer { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
     }
   </style>
@@ -268,12 +266,13 @@
 
   <!-- NAV -->
   <nav>
-    <a href="/" class="nav-logo">UrgeWise</a>
+    <a href="/"><img src="/UrgeWise_App_Icon.png" alt="UrgeWise" style="height: 36px;" /></a>
     <a href="mailto:support@urgewise.app" class="nav-link">Contact</a>
   </nav>
 
   <!-- HERO -->
   <div class="hero">
+    <img src="/UrgeWise Icon 1024 x 1024 - Transparent.png" alt="UrgeWise icon" class="hero-icon" />
     <div class="hero-badge">Coming soon to Android</div>
     <h1>Track your urges.<br/>Understand your patterns.<br/>Reclaim control.</h1>
     <p>UrgeWise is a private, gamified tracking app for people living with body-focused repetitive behaviours — skin picking, hair pulling, nail biting, and more.</p>
