@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UrgeWise — Track. Understand. Overcome.</title>
+  <meta name="description" content="UrgeWise helps people with body-focused repetitive behaviours track urges, build streaks, and understand their patterns — one log at a time." />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #F9F4F5;
+      color: #000;
+    }
+
+    /* NAV */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: #F9F4F5;
+      border-bottom: 1px solid #C8B8DB;
+    }
+    .nav-logo {
+      font-size: 20px;
+      font-weight: 700;
+      color: #502F4C;
+      text-decoration: none;
+    }
+    .nav-link {
+      font-size: 14px;
+      color: #70587C;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .nav-link:hover { color: #502F4C; }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 80px 24px 60px;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: #C8B8DB;
+      color: #502F4C;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 20px;
+      margin-bottom: 24px;
+    }
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 800;
+      color: #502F4C;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 18px;
+      color: #70587C;
+      line-height: 1.7;
+      margin-bottom: 36px;
+    }
+    .hero-cta {
+      display: inline-block;
+      background: #502F4C;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 700;
+      padding: 16px 36px;
+      border-radius: 12px;
+      text-decoration: none;
+    }
+    .hero-cta:hover { background: #3d2239; }
+    .hero-sub {
+      font-size: 13px;
+      color: #70587C;
+      margin-top: 14px;
+    }
+
+    /* DIVIDER */
+    .divider {
+      border: none;
+      border-top: 1px solid #C8B8DB;
+      margin: 0 40px;
+    }
+
+    /* SECTION */
+    section {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 60px 24px;
+    }
+    .section-label {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #70587C;
+      margin-bottom: 12px;
+    }
+    section h2 {
+      font-size: 32px;
+      font-weight: 800;
+      color: #502F4C;
+      margin-bottom: 16px;
+      line-height: 1.25;
+    }
+    section p {
+      font-size: 16px;
+      color: #70587C;
+      line-height: 1.75;
+      margin-bottom: 16px;
+    }
+
+    /* FEATURES */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+    .feature-card {
+      background: #fff;
+      border: 1px solid #C8B8DB;
+      border-radius: 14px;
+      padding: 24px;
+    }
+    .feature-icon { font-size: 28px; margin-bottom: 12px; }
+    .feature-card h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #502F4C;
+      margin-bottom: 8px;
+    }
+    .feature-card p {
+      font-size: 14px;
+      color: #70587C;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* QUOTE */
+    .quote-section {
+      background: #502F4C;
+      padding: 60px 24px;
+      text-align: center;
+    }
+    .quote-section blockquote {
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 22px;
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.6;
+      font-style: italic;
+    }
+    .quote-section cite {
+      display: block;
+      margin-top: 20px;
+      font-size: 13px;
+      color: #C8B8DB;
+      font-style: normal;
+    }
+
+    /* ABOUT */
+    .about-card {
+      background: #fff;
+      border: 1px solid #C8B8DB;
+      border-radius: 14px;
+      padding: 32px;
+      margin-top: 16px;
+    }
+    .about-card p {
+      margin-bottom: 12px;
+    }
+    .about-card p:last-child { margin-bottom: 0; }
+
+    /* COMING SOON */
+    .coming-soon {
+      background: #fff;
+      border: 1px solid #C8B8DB;
+      border-radius: 14px;
+      padding: 40px 32px;
+      text-align: center;
+      margin-top: 16px;
+    }
+    .coming-soon h3 {
+      font-size: 22px;
+      font-weight: 800;
+      color: #502F4C;
+      margin-bottom: 12px;
+    }
+    .coming-soon p {
+      font-size: 15px;
+      color: #70587C;
+      margin-bottom: 24px;
+    }
+    .notify-form {
+      display: flex;
+      gap: 10px;
+      max-width: 400px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .notify-form input {
+      flex: 1;
+      min-width: 200px;
+      padding: 12px 16px;
+      border: 1px solid #C8B8DB;
+      border-radius: 10px;
+      font-size: 15px;
+      background: #F9F4F5;
+      color: #000;
+      outline: none;
+    }
+    .notify-form input:focus { border-color: #502F4C; }
+    .notify-form button {
+      background: #502F4C;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 12px 22px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .notify-form button:hover { background: #3d2239; }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid #C8B8DB;
+      padding: 32px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    footer p { font-size: 13px; color: #70587C; }
+    .footer-links { display: flex; gap: 20px; }
+    .footer-links a {
+      font-size: 13px;
+      color: #70587C;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .footer-links a:hover { color: #502F4C; }
+
+    @media (max-width: 600px) {
+      nav { padding: 16px 20px; }
+      .hero h1 { font-size: 34px; }
+      .hero p { font-size: 16px; }
+      footer { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="/" class="nav-logo">UrgeWise</a>
+    <a href="mailto:support@urgewise.app" class="nav-link">Contact</a>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-badge">Coming soon to Android</div>
+    <h1>Track your urges.<br/>Understand your patterns.<br/>Reclaim control.</h1>
+    <p>UrgeWise is a private, gamified tracking app for people living with body-focused repetitive behaviours — skin picking, hair pulling, nail biting, and more.</p>
+    <a href="#notify" class="hero-cta">Notify me when it launches</a>
+    <p class="hero-sub">Free to try &nbsp;·&nbsp; Android first &nbsp;·&nbsp; Your data stays private</p>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- WHAT IS A BFRB -->
+  <section>
+    <p class="section-label">Understanding BFRBs</p>
+    <h2>You're not alone — and you're not broken.</h2>
+    <p>Body-focused repetitive behaviours (BFRBs) affect an estimated 1 in 20 people. They're not habits you can simply "stop." They're deeply ingrained responses to stress, boredom, and emotional overwhelm — and most people who have them carry them silently for years.</p>
+    <p>The first step isn't willpower. It's awareness.</p>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- FEATURES -->
+  <section>
+    <p class="section-label">What UrgeWise does</p>
+    <h2>Built for the reality of living with a BFRB.</h2>
+    <div class="features">
+      <div class="feature-card">
+        <div class="feature-icon">🎯</div>
+        <h3>Log urges, not just incidents</h3>
+        <p>Every urge you catch and log instead of acting on is a win. UrgeWise rewards that — because the battle is fought before the behaviour.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📈</div>
+        <h3>See your patterns</h3>
+        <p>Charts by location, body part, and time reveal when and where your urges spike — turning vague feelings into actionable insight.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔥</div>
+        <h3>Streak tracking</h3>
+        <p>Build incident-free streaks and earn points automatically every 6 hours. Progress feels real because it is.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">💬</div>
+        <h3>Thoughts & feelings log</h3>
+        <p>Capture what's going on emotionally in the moment. Over time, patterns in your thoughts become just as revealing as the behaviour itself.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🏆</div>
+        <h3>Goals & achievements</h3>
+        <p>Set meaningful targets — hours, days, weeks incident-free — and track your progress toward them.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔒</div>
+        <h3>Private by design</h3>
+        <p>Your data is yours. UrgeWise is built on secure, encrypted infrastructure. Nothing is shared or sold.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <div class="quote-section">
+    <blockquote>
+      "Awareness is the first step to change. Every entry helps you understand your patterns better."
+    </blockquote>
+    <cite>— From inside the app</cite>
+  </div>
+
+  <!-- ABOUT -->
+  <section>
+    <p class="section-label">The story behind UrgeWise</p>
+    <h2>Built by someone who gets it.</h2>
+    <div class="about-card">
+      <p>My name is Richard. I've lived with chronic skin picking disorder for over 30 years.</p>
+      <p>I built UrgeWise because I couldn't find a tool that treated this condition with the seriousness and nuance it deserves. Most apps are built for generic habit tracking — they weren't designed for the reality of a BFRB, where an incident isn't a failure but an act of honesty, and catching an urge deserves as much recognition as a clean day.</p>
+      <p>UrgeWise is the app I wished existed. I hope it helps you the way building it has helped me.</p>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- COMING SOON / NOTIFY -->
+  <section id="notify">
+    <p class="section-label">Launch</p>
+    <h2>Coming soon to Android.</h2>
+    <div class="coming-soon">
+      <h3>Be the first to know</h3>
+      <p>Leave your email and we'll notify you the moment UrgeWise is available on the Google Play Store.</p>
+      <form class="notify-form" action="mailto:support@urgewise.app" method="get" enctype="text/plain">
+        <input type="email" name="email" placeholder="your@email.com" required />
+        <button type="submit">Notify me</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 UrgeWise. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="mailto:support@urgewise.app">support@urgewise.app</a>
+    </div>
+  </footer>
+
+</body>
+</html>
