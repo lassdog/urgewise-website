@@ -44,7 +44,7 @@
 
     /* Left: visual */
     .hero-visual {
-      flex: 1.1;
+      flex: 0.935;
       min-width: 0;
     }
 
@@ -325,6 +325,11 @@
       font-weight: 600;
     }
     .footer-links a:hover { color: #502F4C; }
+
+    /* DESKTOP ONLY */
+    @media (min-width: 701px) {
+      .hero-content { margin-top: -100px; }
+    }
 
     /* MOBILE */
     @media (max-width: 700px) {
