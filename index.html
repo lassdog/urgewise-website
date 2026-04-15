@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>UrgeWise — Track. Understand. Overcome.</title>
-  <meta name="description" content="UrgeWise helps people with body-focused repetitive behaviours track urges, build streaks, and understand their patterns — one log at a time." />
+  <title>UrgeWise &mdash; Track. Understand. Overcome.</title>
+  <meta name="description" content="UrgeWise helps people with body-focused repetitive behaviours track urges, build streaks, and understand their patterns &mdash; one log at a time." />
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -33,14 +33,30 @@
 
     /* HERO */
     .hero {
-      text-align: center;
-      padding: 72px 24px 48px;
-      max-width: 760px;
-      margin: 0 auto;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 56px 40px;
+      gap: 56px;
       align-items: center;
     }
+
+    /* Left: visual */
+    .hero-visual {
+      flex: 1.1;
+      min-width: 0;
+    }
+
+    /* Right: content */
+    .hero-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+    }
+
     .hero-badge {
       display: inline-block;
       background: #C8B8DB;
@@ -51,49 +67,33 @@
       text-transform: uppercase;
       padding: 6px 14px;
       border-radius: 20px;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
-    .hero h1 {
-      font-size: 48px;
+    .hero-content h1 {
+      font-size: 44px;
       font-weight: 800;
       color: #502F4C;
       line-height: 1.15;
       margin-bottom: 20px;
     }
-    .hero > p {
-      font-size: 18px;
+    .hero-content > p {
+      font-size: 17px;
       color: #70587C;
       line-height: 1.7;
-      margin-bottom: 40px;
-      max-width: 600px;
+      margin-bottom: 36px;
     }
 
     /* CAROUSEL */
-    .carousel-wrapper {
-      width: 100%;
-      margin-bottom: 40px;
-    }
-
-    /* Desktop: 4 images in a row */
-    .carousel-desktop {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-    }
-    .carousel-desktop img {
-      width: 100%;
-      border-radius: 20px;
-      box-shadow: 0 8px 32px rgba(80, 47, 76, 0.15);
-    }
-
-    /* Mobile: swipeable carousel */
-    .carousel-mobile {
-      display: none;
-      position: relative;
+    .carousel-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
     }
     .carousel-track-wrapper {
+      flex: 1;
       overflow: hidden;
       border-radius: 20px;
+      min-width: 0;
     }
     .carousel-track {
       display: flex;
@@ -103,8 +103,23 @@
       min-width: 100%;
       width: 100%;
       border-radius: 20px;
-      box-shadow: 0 8px 32px rgba(80, 47, 76, 0.15);
+      display: block;
     }
+    .carousel-chevron {
+      background: rgba(255,255,255,0.9);
+      border: 1px solid #C8B8DB;
+      border-radius: 50%;
+      width: 34px;
+      height: 34px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: #70587C;
+      font-size: 18px;
+    }
+    .carousel-chevron:hover { background: #fff; color: #502F4C; }
     .carousel-dots {
       display: flex;
       justify-content: center;
@@ -121,35 +136,10 @@
       border: none;
       padding: 0;
     }
-    .carousel-dot.active {
-      background: #502F4C;
-    }
-    .carousel-chevrons {
-      display: flex;
-      justify-content: space-between;
-      position: absolute;
-      top: 50%;
-      left: 0;
-      right: 0;
-      transform: translateY(-50%);
-      pointer-events: none;
-      padding: 0 8px;
-    }
-    .carousel-chevron {
-      pointer-events: all;
-      background: rgba(255,255,255,0.7);
-      border: none;
-      border-radius: 50%;
-      width: 32px;
-      height: 32px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      color: #70587C;
-      font-size: 16px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
+    .carousel-dot.active { background: #502F4C; }
+
+    /* Mobile-only CTA block (hidden on desktop) */
+    .hero-cta-mobile { display: none; }
 
     .hero-cta {
       display: inline-block;
@@ -336,12 +326,37 @@
     }
     .footer-links a:hover { color: #502F4C; }
 
+    /* MOBILE */
     @media (max-width: 700px) {
       nav { padding: 16px 20px; }
-      .hero h1 { font-size: 34px; }
-      .hero > p { font-size: 16px; }
-      .carousel-desktop { display: none; }
-      .carousel-mobile { display: block; }
+
+      .hero {
+        flex-direction: column;
+        padding: 20px 20px 40px;
+        gap: 20px;
+        text-align: center;
+      }
+      .hero-visual { order: 2; width: 100%; }
+      .hero-content {
+        order: 1;
+        align-items: center;
+      }
+      .hero-content h1 { font-size: 34px; }
+      .hero-content > p { font-size: 16px; margin-bottom: 0; }
+
+      /* Hide desktop CTA inside hero-content on mobile */
+      .hero-content .hero-cta,
+      .hero-content .hero-sub { display: none; }
+
+      /* Show mobile CTA block below carousel */
+      .hero-cta-mobile {
+        order: 3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+      }
+
       footer { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
       .divider { margin: 0 20px; }
     }
@@ -357,23 +372,11 @@
 
   <!-- HERO -->
   <div class="hero">
-    <div class="hero-badge">Coming soon to Android</div>
-    <h1>Track your urges.<br/>Understand your patterns.<br/>Reclaim control.</h1>
-    <p>UrgeWise is a private, gamified tracking app for people living with body-focused repetitive behaviours — skin picking, hair pulling, nail biting, and more.</p>
 
-    <!-- CAROUSEL -->
-    <div class="carousel-wrapper">
-
-      <!-- Desktop: 4 in a row -->
-      <div class="carousel-desktop">
-        <img src="/UrgeWise App - Main Screen.png" alt="UrgeWise main screen" />
-        <img src="/UrgeWise App Goals.png" alt="UrgeWise goals" />
-        <img src="/UrgeWise App Incidents and Urges.png" alt="UrgeWise incidents and urges" />
-        <img src="/UrgeWise App Stats.png" alt="UrgeWise stats" />
-      </div>
-
-      <!-- Mobile: swipeable -->
-      <div class="carousel-mobile" id="carousel">
+    <!-- Left on desktop / middle on mobile: carousel -->
+    <div class="hero-visual">
+      <div class="carousel-container" id="carousel">
+        <button class="carousel-chevron" id="prevBtn">&#8249;</button>
         <div class="carousel-track-wrapper">
           <div class="carousel-track" id="carouselTrack">
             <img src="/UrgeWise App - Main Screen.png" alt="UrgeWise main screen" />
@@ -382,22 +385,31 @@
             <img src="/UrgeWise App Stats.png" alt="UrgeWise stats" />
           </div>
         </div>
-        <div class="carousel-chevrons">
-          <button class="carousel-chevron" id="prevBtn">&#8249;</button>
-          <button class="carousel-chevron" id="nextBtn">&#8250;</button>
-        </div>
-        <div class="carousel-dots" id="carouselDots">
-          <button class="carousel-dot active" data-index="0"></button>
-          <button class="carousel-dot" data-index="1"></button>
-          <button class="carousel-dot" data-index="2"></button>
-          <button class="carousel-dot" data-index="3"></button>
-        </div>
+        <button class="carousel-chevron" id="nextBtn">&#8250;</button>
       </div>
-
+      <div class="carousel-dots" id="carouselDots">
+        <button class="carousel-dot active" data-index="0"></button>
+        <button class="carousel-dot" data-index="1"></button>
+        <button class="carousel-dot" data-index="2"></button>
+        <button class="carousel-dot" data-index="3"></button>
+      </div>
     </div>
 
-    <a href="#notify" class="hero-cta">Notify me when it launches</a>
-    <p class="hero-sub">Free to try &nbsp;·&nbsp; Android first &nbsp;·&nbsp; Your data stays private</p>
+    <!-- Right on desktop / top on mobile: text + CTA -->
+    <div class="hero-content">
+      <div class="hero-badge">Coming soon to Android</div>
+      <h1>Track your urges.<br/>Understand your patterns.<br/>Reclaim control.</h1>
+      <p>UrgeWise is a private, gamified tracking app for people living with body-focused repetitive behaviours &mdash; skin picking, hair pulling, nail biting, and more.</p>
+      <a href="#notify" class="hero-cta">Notify me when it launches</a>
+      <p class="hero-sub">Free to try &nbsp;&middot;&nbsp; Android first &nbsp;&middot;&nbsp; Your data stays private</p>
+    </div>
+
+    <!-- Mobile-only CTA block (shown below carousel on mobile) -->
+    <div class="hero-cta-mobile">
+      <a href="#notify" class="hero-cta">Notify me when it launches</a>
+      <p class="hero-sub">Free to try &nbsp;&middot;&nbsp; Android first &nbsp;&middot;&nbsp; Your data stays private</p>
+    </div>
+
   </div>
 
   <hr class="divider" />
@@ -405,9 +417,9 @@
   <!-- WHAT IS A BFRB -->
   <section>
     <p class="section-label">Understanding BFRBs</p>
-    <h2>You're not alone — and you're not broken.</h2>
-    <p>Body-focused repetitive behaviours (BFRBs) affect an estimated 1 in 20 people. They're not habits you can simply "stop." They're deeply ingrained responses to stress, boredom, and emotional overwhelm — and most people who have them carry them silently for years.</p>
-    <p>The first step isn't willpower. It's awareness.</p>
+    <h2>You&rsquo;re not alone &mdash; and you&rsquo;re not broken.</h2>
+    <p>Body-focused repetitive behaviours (BFRBs) affect an estimated 1 in 20 people. They&rsquo;re not habits you can simply &ldquo;stop.&rdquo; They&rsquo;re deeply ingrained responses to stress, boredom, and emotional overwhelm &mdash; and most people who have them carry them silently for years.</p>
+    <p>The first step isn&rsquo;t willpower. It&rsquo;s awareness.</p>
   </section>
 
   <hr class="divider" />
@@ -420,12 +432,12 @@
       <div class="feature-card">
         <div class="feature-icon">🎯</div>
         <h3>Log urges, not just incidents</h3>
-        <p>Every urge you catch and log instead of acting on is a win. UrgeWise rewards that — because the battle is fought before the behaviour.</p>
+        <p>Every urge you catch and log instead of acting on is a win. UrgeWise rewards that &mdash; because the battle is fought before the behaviour.</p>
       </div>
       <div class="feature-card">
-        <div class="feature-icon">📈</div>
+        <div class="feature-icon">📊</div>
         <h3>See your patterns</h3>
-        <p>Charts by location, body part, and time reveal when and where your urges spike — turning vague feelings into actionable insight.</p>
+        <p>Charts by location, body part, and time reveal when and where your urges spike &mdash; turning vague feelings into actionable insight.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">🔥</div>
@@ -434,13 +446,13 @@
       </div>
       <div class="feature-card">
         <div class="feature-icon">💬</div>
-        <h3>Thoughts & feelings log</h3>
-        <p>Capture what's going on emotionally in the moment. Over time, patterns in your thoughts become just as revealing as the behaviour itself.</p>
+        <h3>Thoughts &amp; feelings log</h3>
+        <p>Capture what&rsquo;s going on emotionally in the moment. Over time, patterns in your thoughts become just as revealing as the behaviour itself.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">🏆</div>
-        <h3>Goals & achievements</h3>
-        <p>Set meaningful targets — hours, days, weeks incident-free — and track your progress toward them.</p>
+        <h3>Goals &amp; achievements</h3>
+        <p>Set meaningful targets &mdash; hours, days, weeks incident-free &mdash; and track your progress toward them.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">🔒</div>
@@ -453,9 +465,9 @@
   <!-- QUOTE -->
   <div class="quote-section">
     <blockquote>
-      "Awareness is the first step to change. Every entry helps you understand your patterns better."
+      &ldquo;Awareness is the first step to change. Every entry helps you understand your patterns better.&rdquo;
     </blockquote>
-    <cite>— From inside the app</cite>
+    <cite>&mdash; From inside the app</cite>
   </div>
 
   <!-- ABOUT -->
@@ -463,8 +475,8 @@
     <p class="section-label">The story behind UrgeWise</p>
     <h2>Built by someone who gets it.</h2>
     <div class="about-card">
-      <p>My name is Richard. I've lived with chronic skin picking disorder for over 30 years.</p>
-      <p>I built UrgeWise because I couldn't find a tool that treated this condition with the seriousness and nuance it deserves. Most apps are built for generic habit tracking — they weren't designed for the reality of a BFRB, where an incident isn't a failure but an act of honesty, and catching an urge deserves as much recognition as a clean day.</p>
+      <p>My name is Richard. I&rsquo;ve lived with chronic skin picking disorder for over 30 years.</p>
+      <p>I built UrgeWise because I couldn&rsquo;t find a tool that treated this condition with the seriousness and nuance it deserves. Most apps are built for generic habit tracking &mdash; they weren&rsquo;t designed for the reality of a BFRB, where an incident isn&rsquo;t a failure but an act of honesty, and catching an urge deserves as much recognition as a clean day.</p>
       <p>UrgeWise is the app I wished existed. I hope it helps you the way building it has helped me.</p>
     </div>
   </section>
@@ -477,7 +489,7 @@
     <h2>Coming soon to Android.</h2>
     <div class="coming-soon">
       <h3>Be the first to know</h3>
-      <p>Leave your email and we'll notify you the moment UrgeWise is available on the Google Play Store.</p>
+      <p>Leave your email and we&rsquo;ll notify you the moment UrgeWise is available on the Google Play Store.</p>
       <form class="notify-form" action="mailto:support@urgewise.app" method="get" enctype="text/plain">
         <input type="email" name="email" placeholder="your@email.com" required />
         <button type="submit">Notify me</button>
@@ -487,7 +499,7 @@
 
   <!-- FOOTER -->
   <footer>
-    <p>© 2026 UrgeWise. All rights reserved.</p>
+    <p>&copy; 2026 UrgeWise. All rights reserved.</p>
     <div class="footer-links">
       <a href="/privacy.html">Privacy Policy</a>
       <a href="mailto:support@urgewise.app">support@urgewise.app</a>
