@@ -218,6 +218,9 @@
       border-radius: 14px;
       padding: 24px;
     }
+    .feature-card-wide {
+      grid-column: 1 / -1;
+    }
     .feature-icon { font-size: 28px; margin-bottom: 12px; }
     .feature-card h3 {
       font-size: 16px;
@@ -226,6 +229,27 @@
       margin-bottom: 8px;
     }
     .feature-card p {
+      font-size: 14px;
+      color: #70587C;
+      line-height: 1.6;
+      margin: 0;
+    }
+    .entry-types {
+      display: flex;
+      gap: 24px;
+      margin-top: 4px;
+    }
+    .entry-type {
+      flex: 1;
+    }
+    .entry-type strong {
+      display: block;
+      color: #502F4C;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .entry-type p {
       font-size: 14px;
       color: #70587C;
       line-height: 1.6;
@@ -376,6 +400,8 @@
 
       footer { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
       .divider { margin: 0 20px; }
+      .feature-card-wide { grid-column: auto; }
+      .entry-types { flex-direction: column; gap: 16px; }
     }
   </style>
 </head>
@@ -434,36 +460,28 @@
 
   <hr class="divider" />
 
-  <!-- WHAT IS A BFRB -->
-  <section>
-    <p class="section-label">Understanding BFRBs</p>
-    <h2>You&rsquo;re not alone. And you&rsquo;re not broken.</h2>
-    <p>Body-focused repetitive behaviours (BFRBs) affect an estimated 1 in 20 people. They&rsquo;re not habits you can simply &ldquo;stop.&rdquo; They&rsquo;re deeply ingrained responses to stress, boredom, and emotional overwhelm. Most people who have them carry them silently for years.</p>
-    <p>The first step isn&rsquo;t willpower. It&rsquo;s awareness.</p>
-  </section>
-
-  <hr class="divider" />
-
-  <!-- WHAT MAKES URGEWISE DIFFERENT -->
-  <section>
-    <p class="section-label">What makes UrgeWise different</p>
-    <h2>Every step forward counts.</h2>
-    <p>The battle isn&rsquo;t just about stopping &mdash; it&rsquo;s about catching urges before they become incidents. UrgeWise rewards you for both, because awareness is the first step to change.</p>
-    <p>Log an urge instead of acting on it? That&rsquo;s a win. When you&rsquo;re brave enough to log an incident? That&rsquo;s an awareness victory. When you go 6 hours without any major incidents? That&rsquo;s another win, automatically tracked by the app.</p>
-    <p>Everything about this app is designed to keep you motivated to monitor and manage your impulse control disorder over time. Stack enough wins and you may start to feel &mdash; for the first time in a long time &mdash; that you are actually on the road to recovery.</p>
-  </section>
-
-  <hr class="divider" />
-
   <!-- FEATURES -->
   <section>
     <p class="section-label">What UrgeWise does</p>
     <h2>Built for the reality of living with a BFRB.</h2>
     <div class="features">
-      <div class="feature-card">
+      <div class="feature-card feature-card-wide">
         <div class="feature-icon">🎯</div>
         <h3>Three entry types, one clear picture</h3>
-        <p><strong>Urge</strong> &mdash; you felt the pull and didn&rsquo;t act on it. The most powerful entry you can log.<br/><br/><strong>Minor Mishap</strong> &mdash; a small slip that doesn&rsquo;t reset your goals or streaks.<br/><br/><strong>Major Incident</strong> &mdash; logged honestly, it&rsquo;s an awareness victory that helps you identify your triggers.</p>
+        <div class="entry-types">
+          <div class="entry-type">
+            <strong>Urge</strong>
+            <p>You felt the pull and didn&rsquo;t act on it. The most powerful entry you can log.</p>
+          </div>
+          <div class="entry-type">
+            <strong>Minor Mishap</strong>
+            <p>A small slip that doesn&rsquo;t reset your goals or streaks.</p>
+          </div>
+          <div class="entry-type">
+            <strong>Major Incident</strong>
+            <p>Logged honestly, it&rsquo;s an awareness victory that helps you identify your triggers.</p>
+          </div>
+        </div>
       </div>
       <div class="feature-card">
         <div class="feature-icon">📊</div>
@@ -501,6 +519,27 @@
         <p>Your data is yours. UrgeWise is built on secure, encrypted infrastructure. Nothing is shared or sold.</p>
       </div>
     </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- WHAT IS A BFRB -->
+  <section>
+    <p class="section-label">Understanding BFRBs</p>
+    <h2>You&rsquo;re not alone. And you&rsquo;re not broken.</h2>
+    <p>Body-focused repetitive behaviours (BFRBs) affect an estimated 1 in 20 people. They&rsquo;re not habits you can simply &ldquo;stop.&rdquo; They&rsquo;re deeply ingrained responses to stress, boredom, and emotional overwhelm. Most people who have them carry them silently for years.</p>
+    <p>The first step isn&rsquo;t willpower. It&rsquo;s awareness.</p>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- WHAT MAKES URGEWISE DIFFERENT -->
+  <section>
+    <p class="section-label">What makes UrgeWise different</p>
+    <h2>Every step forward counts.</h2>
+    <p>The battle isn&rsquo;t just about stopping &mdash; it&rsquo;s about catching urges before they become incidents. UrgeWise rewards you for both, because awareness is the first step to change.</p>
+    <p>Log an urge instead of acting on it? That&rsquo;s a win. When you&rsquo;re brave enough to log an incident? That&rsquo;s an awareness victory. When you go 6 hours without any major incidents? That&rsquo;s another win, automatically tracked by the app.</p>
+    <p>Everything about this app is designed to keep you motivated to monitor and manage your impulse control disorder over time. Stack enough wins and you may start to feel &mdash; for the first time in a long time &mdash; that you are actually on the road to recovery.</p>
   </section>
 
   <!-- QUOTE -->
