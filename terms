@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Use &mdash; UrgeWise</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #F9F4F5;
+      color: #000;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 40px;
+      background: #F9F4F5;
+      border-bottom: 1px solid #C8B8DB;
+    }
+    .nav-link {
+      font-size: 14px;
+      color: #70587C;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .nav-link:hover { color: #502F4C; }
+    .nav-download {
+      font-size: 14px;
+      font-weight: 700;
+      color: #fff;
+      background: #502F4C;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 8px;
+    }
+    .nav-download:hover { background: #3d2239; }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 60px 24px;
+    }
+
+    .page-label {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #70587C;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 36px;
+      font-weight: 800;
+      color: #502F4C;
+      margin-bottom: 8px;
+      line-height: 1.2;
+    }
+
+    .last-updated {
+      font-size: 13px;
+      color: #70587C;
+      margin-bottom: 40px;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid #C8B8DB;
+      border-radius: 14px;
+      padding: 32px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #502F4C;
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-size: 15px;
+      color: #70587C;
+      line-height: 1.75;
+      margin-bottom: 12px;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      margin: 8px 0 12px 20px;
+    }
+
+    ul li {
+      font-size: 15px;
+      color: #70587C;
+      line-height: 1.75;
+      margin-bottom: 6px;
+    }
+
+    a { color: #502F4C; }
+
+    footer {
+      border-top: 1px solid #C8B8DB;
+      padding: 32px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    footer p { font-size: 13px; color: #70587C; }
+    .footer-links { display: flex; gap: 20px; }
+    .footer-links a {
+      font-size: 13px;
+      color: #70587C;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .footer-links a:hover { color: #502F4C; }
+
+    @media (max-width: 600px) {
+      nav { padding: 16px 20px; }
+      .container { padding: 40px 20px; }
+      h1 { font-size: 28px; }
+      footer { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="/"><img src="/UrgeWise_App_Icon.png" alt="UrgeWise" style="height: 36px;" /></a>
+    <div style="display: flex; align-items: center; gap: 20px;">
+      <a href="mailto:support@urgewise.app" class="nav-link">Contact</a>
+      <a href="https://play.google.com/apps/internaltest/4701729729166505881" class="nav-download">Download on Google Play</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <p class="page-label">Legal</p>
+    <h1>Terms of Use</h1>
+    <p class="last-updated">Last updated: May 2026</p>
+
+    <div class="card">
+      <h2>Acceptance of terms</h2>
+      <p>By downloading, installing, or using the UrgeWise app (&ldquo;the app&rdquo;), you agree to be bound by these Terms of Use. If you do not agree to these terms, do not use the app.</p>
+      <p>These terms apply to all users of UrgeWise, including users on a free trial and paid subscribers.</p>
+    </div>
+
+    <div class="card">
+      <h2>About UrgeWise</h2>
+      <p>UrgeWise is a personal tracking and journalling app designed to help individuals manage body-focused repetitive behaviours (BFRBs) such as skin picking, hair pulling, and nail biting.</p>
+      <p>UrgeWise is not a medical device and does not provide medical advice, diagnosis, or treatment. It is intended as a self-help tool only. If you are experiencing significant distress related to a BFRB, please consult a qualified healthcare professional.</p>
+    </div>
+
+    <div class="card">
+      <h2>Account registration</h2>
+      <p>To use UrgeWise, you must create an account with a valid email address and password. You are responsible for maintaining the confidentiality of your account credentials and for all activity that occurs under your account.</p>
+      <p>You must be at least 13 years old to create an account. By registering, you confirm that you meet this age requirement.</p>
+      <p>Please notify us immediately at <a href="mailto:support@urgewise.app">support@urgewise.app</a> if you believe your account has been accessed without your authorisation.</p>
+    </div>
+
+    <div class="card">
+      <h2>Free trial and subscription</h2>
+      <p>UrgeWise Pro is a paid subscription that provides full access to all app features. A 5-day free trial is available to new subscribers.</p>
+
+      <p><strong style="color: #502F4C;">Trial period</strong></p>
+      <p>Your free trial begins when you complete the subscription sign-up through Google Play. You will not be charged during the 5-day trial period. If you do not cancel before the trial ends, your subscription will automatically convert to a paid plan at the applicable rate.</p>
+
+      <p><strong style="color: #502F4C;">Pricing</strong></p>
+      <p>After the free trial, UrgeWise Pro is available at the following rates:</p>
+      <ul>
+        <li>Monthly: $4.99 per month</li>
+        <li>Annual: $39.99 per year</li>
+      </ul>
+      <p>Prices are displayed in USD and may vary by region based on Google Play&rsquo;s local pricing. All prices are inclusive of any applicable taxes where required by law.</p>
+
+      <p><strong style="color: #502F4C;">Auto-renewal</strong></p>
+      <p>Subscriptions renew automatically at the end of each billing period unless cancelled at least 24 hours before the renewal date. Your Google Play account will be charged within 24 hours prior to the end of the current period.</p>
+
+      <p><strong style="color: #502F4C;">Cancellation</strong></p>
+      <p>You can cancel your subscription at any time through the Google Play Store: open the Play Store app, tap your profile icon, go to Payments &amp; subscriptions &gt; Subscriptions, select UrgeWise, and tap Cancel subscription. Cancellation takes effect at the end of the current billing period &mdash; you will retain access until that date.</p>
+
+      <p><strong style="color: #502F4C;">Access after expiry</strong></p>
+      <p>If your subscription expires or is cancelled, you will retain read-only access to your existing data. You will not be able to log new entries until an active subscription is restored. Your data is never deleted due to subscription expiry.</p>
+    </div>
+
+    <div class="card">
+      <h2>Refunds</h2>
+      <p>All purchases are processed by Google Play. Refund requests are subject to <a href="https://support.google.com/googleplay/answer/2479637" target="_blank">Google Play&rsquo;s refund policy</a>. We are unable to process refunds directly &mdash; please contact Google Play support for assistance.</p>
+    </div>
+
+    <div class="card">
+      <h2>Your data</h2>
+      <p>You retain ownership of all content you enter into UrgeWise, including journal entries, logs, and goals. We do not claim any rights over your personal data.</p>
+      <p>By using the app, you grant us a limited licence to store and process your data solely for the purpose of providing the UrgeWise service to you. We do not sell or share your personal data with third parties for marketing purposes.</p>
+      <p>For full details on how we handle your data, please read our <a href="/privacy.html">Privacy Policy</a>.</p>
+    </div>
+
+    <div class="card">
+      <h2>Acceptable use</h2>
+      <p>You agree not to:</p>
+      <ul>
+        <li>Use the app for any unlawful purpose</li>
+        <li>Attempt to gain unauthorised access to any part of the app or its infrastructure</li>
+        <li>Reverse engineer, decompile, or otherwise attempt to extract the source code of the app</li>
+        <li>Use the app in any way that could damage, disable, or impair its functionality</li>
+        <li>Create multiple accounts to circumvent trial or subscription limits</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Intellectual property</h2>
+      <p>All content, design, branding, and code within UrgeWise &mdash; including the UrgeWise name, logo, and app interface &mdash; are the property of UrgeWise and are protected by applicable intellectual property laws. You may not reproduce, distribute, or create derivative works from any part of the app without our express written permission.</p>
+    </div>
+
+    <div class="card">
+      <h2>Disclaimers</h2>
+      <p>UrgeWise is provided &ldquo;as is&rdquo; without warranties of any kind, express or implied. We do not warrant that the app will be uninterrupted, error-free, or free of harmful components.</p>
+      <p>UrgeWise is a self-help tool and is not a substitute for professional medical, psychological, or therapeutic advice. We make no representations regarding the effectiveness of the app for any particular purpose.</p>
+    </div>
+
+    <div class="card">
+      <h2>Limitation of liability</h2>
+      <p>To the fullest extent permitted by law, UrgeWise and its developers shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of or inability to use the app, including but not limited to loss of data, loss of revenue, or personal injury.</p>
+      <p>Our total liability to you for any claim arising from these terms or your use of the app shall not exceed the amount you paid for your current subscription period.</p>
+    </div>
+
+    <div class="card">
+      <h2>Termination</h2>
+      <p>We reserve the right to suspend or terminate your account at any time if we believe you have violated these terms. You may also delete your account at any time by contacting us at <a href="mailto:support@urgewise.app">support@urgewise.app</a>.</p>
+      <p>Upon termination, your right to use the app ceases immediately. Sections of these terms that by their nature should survive termination will continue to apply.</p>
+    </div>
+
+    <div class="card">
+      <h2>Changes to these terms</h2>
+      <p>We may update these Terms of Use from time to time. When we do, we will update the &ldquo;Last updated&rdquo; date at the top of this page. Continued use of the app after changes are posted constitutes your acceptance of the revised terms.</p>
+    </div>
+
+    <div class="card">
+      <h2>Contact</h2>
+      <p>If you have any questions about these Terms of Use, please contact us at <a href="mailto:support@urgewise.app">support@urgewise.app</a>.</p>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 UrgeWise. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms of Use</a>
+      <a href="mailto:support@urgewise.app">support@urgewise.app</a>
+    </div>
+  </footer>
+
+</body>
+</html>
